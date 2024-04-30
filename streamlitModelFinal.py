@@ -2,7 +2,9 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load('OOPmodel2.pkl')
+pickle_in = open('OOPmodel2.pkl', 'rb') 
+model = pickle.load(pickle_in)
+# model = joblib.load('OOPmodel2.pkl')
 
 def main():
     st.title(':red[Customer Churn Prediction]')
